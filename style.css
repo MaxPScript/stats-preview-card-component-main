@@ -105,12 +105,14 @@ p {
   /* margin-block-start: -10%; */
   width: 85%;
   font-size: clamp(0.28rem, 1vw, 1rem);
+  flex-basis: 28%;
 }
 
 .stat {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  padding: 0.8em;
 }
 .stat div {
   display: flex;
@@ -127,4 +129,67 @@ p {
   text-transform: uppercase;
   font-size: clamp(0.28rem, 1vw, 1rem);
   letter-spacing: 0.16em;
+}
+
+@media (max-width: 375px) {
+  body {
+    /* place-content: center; */
+    padding-top: 4em;
+  }
+  .main {
+    width: 87%;
+    aspect-ratio: 326/779;
+    overflow: visible;
+    flex-direction: column;
+  }
+  .hero-img {
+    margin: 0;
+    order: 0;
+    flex-basis: 34%;
+  }
+  .section {
+    order: 1;
+    /* outline: 1px solid red; */
+    flex-basis: 66%;
+    min-width: 100%;
+    padding: 0;
+    justify-content: space-around;
+  }
+  .section-h1 {
+    text-align: center;
+    margin: 0 auto;
+    /* margin-top: 0; */
+    font-size: clamp(0.7rem, 8.2vw, 2.5rem);
+    width: 15ch;
+    /* outline: 1px solid red; */
+  }
+  .section > p:nth-child(2) {
+    /* margin-block-start: -10%; */
+    /* outline: 1px solid red; */
+    /* width: 85%; */
+    font-size: clamp(0.7rem, 4.1vw, 2.5rem);
+    margin: -2em auto 0;
+    width: 30ch;
+    text-align: center;
+  }
+  .stat {
+    margin: -3em auto 0;
+    /* outline: 1px solid red; */
+    flex-direction: column;
+    flex-basis: 44%;
+    justify-content: space-evenly;
+    border-radius: 0.5em;
+    border: 1px solid var(--Dark-desaturated-blue);
+    /* box-shadow: -5px -5px 5px -5px hsl(244, 38%, 16%) inset; */
+    /* box-shadow: 5px 5px 12px rgb(17, 15, 46), -5px -5px 12px rgb(37, 35, 66); */
+    box-shadow: 5px 5px 3px rgb(17 15 46), -3px -4px 3px rgb(52 50 81);
+  }
+  .stat p {
+    font-size: clamp(0.7rem, 7vw, 2.5rem);
+    text-align: center;
+  }
+  .stat span {
+    font-size: clamp(0.28rem, 3.5vw, 2.5rem);
+    text-align: center;
+  }
 }
