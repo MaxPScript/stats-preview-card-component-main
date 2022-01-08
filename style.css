@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+/* The designs were created to the following widths: */
+/* Mobile: 375px */
+/* Desktop: 1440px */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* __________Primary */
+  /* (main background) */
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  /* (card background) */
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  /* (accent) */
+  --Soft-violet: hsl(277, 64%, 61%);
+  --Soft-violet-alfa: hsla(277, 64%, 61%, 0.5);
+  /* __________Neutral */
+  /* (main heading, stats) */
+  --White: hsl(0, 0%, 100%);
+  /* (main paragraph) */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (stat headings) */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+.attribution {
+  text-align: center;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 15px;
+  background: var(--Very-dark-blue);
+}
+.main {
+  /* outline: 1px solid red; */
+
+  aspect-ratio: 1108/446;
+  display: flex;
+  width: 1108px;
+  max-width: 1108px;
+  width: 77%;
+  /* height: 446px; */
+  background: var(--Dark-desaturated-blue);
+  margin-bottom: 1.5em;
+  border-radius: 1.2vw;
+  overflow: hidden;
+}
+.hero-img {
+  /* aspect-ratio: 540/446; */
+  flex-basis: 50%;
+  margin-left: auto;
+  position: relative;
+  background: url(images/image-header-desktop.jpg);
+  background-size: contain;
+  background-size: 100%;
+}
+.hero-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--Soft-violet);
+  background: var(--Soft-violet-alfa);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vw;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+h1 {
+  /* outline: 1px solid red; */
+  /* max-width: 19ch; */
+  width: 17ch;
+  font-size: clamp(0.7rem, 2.5vw, 2.5rem);
+  color: var(--White);
+  font-family: "Inter", sans-serif;
+  /* font-size: 2.3rem; */
+}
+h1 span {
+  color: var(--Soft-violet);
+}
+p {
+  color: var(--Slightly-transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+}
+.section > p:nth-child(2) {
+  /* margin-block-start: -10%; */
+  width: 85%;
+  font-size: clamp(0.28rem, 1vw, 1rem);
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.stat div {
+  display: flex;
+  flex-direction: column;
+}
+.stat p {
+  color: var(--White);
+  font-size: x-large;
+  font-size: clamp(0.47rem, 1.8vw, 1.8rem);
+  margin-bottom: 0;
+}
+.stat span {
+  color: var(--Slightly-transparent-white);
+  text-transform: uppercase;
+  font-size: clamp(0.28rem, 1vw, 1rem);
+  letter-spacing: 0.16em;
+}
